@@ -11,8 +11,8 @@ pipeline {
 			}
 			stage("maven build") {
                                 steps{
-                                 sh "mvn clean install"
-				 maven_invoker invokerBuildDir: 'target/it', reportsFilenamePattern: 'target/invoker-reports/BUILD*.xml'
+					maven_invoker invokerBuildDir: 'target/it', reportsFilenamePattern: 'target/invoker-reports/BUILD*.xml'
+					sh "mvn clean install"
                                 }
                         }
 
