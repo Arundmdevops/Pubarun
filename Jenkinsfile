@@ -1,8 +1,10 @@
-pipeeline{
-    agent any
-    stages{
-        stage("git"){
-            https://github.com/Arundmdevops/Pubarun.git
-        }
-    }
-}
+pipeline {
+	agent any
+		stages {
+			stage("git") {
+				steps{
+				 git branch: 'main', url: 'https://github.com/Arundmdevops/Pubarun.git'
+				}
+			}
+		}
+	}
