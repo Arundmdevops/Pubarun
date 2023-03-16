@@ -1,5 +1,7 @@
 pipeline {
 	agent any
+	environment {
+		PATH = /usr/bin:$PATH
 	stages {
 		stage("git") {
 			steps{
